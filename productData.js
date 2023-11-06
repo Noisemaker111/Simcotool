@@ -1,3 +1,6 @@
+const adminOverhead = 0.11;
+
+
 const productData = [
     {
       Product: "Seeds", 
@@ -6,6 +9,7 @@ const productData = [
       "Per Unit Worker Cost": 0.12, 
       "Transport Units Required per Unit": 0.1,
       "Per Unit Admin Cost": 0,
+      Building : "Farm",
       Ingredients: "0.1Water"
     },
     {
@@ -15,6 +19,7 @@ const productData = [
       "Per Unit Worker Cost": 0.51,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.01,
+      Building : "Farm",
       Ingredients: "1Seeds,3Water"
     },
     {
@@ -24,6 +29,8 @@ const productData = [
       "Per Unit Worker Cost": 0.56,
       "Transport Units Required per Unit": 1, 
       "Per Unit Admin Cost": 0.01,
+      Building : "Farm",
+
       Ingredients: "1Seeds,3Water"
     },
     {
@@ -33,6 +40,8 @@ const productData = [
       "Per Unit Worker Cost": 0.64,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0,
+      Building : "Farm",
+
       Ingredients: "1Seeds,4Water"
     },
     {
@@ -42,6 +51,7 @@ const productData = [
       "Per Unit Worker Cost": 0.13,
       "Transport Units Required per Unit": 0.1,
       "Per Unit Admin Cost": 0,
+      Building : "Farm",
       Ingredients: "1Seeds,0.5Water"
     },
     {
@@ -51,6 +61,7 @@ const productData = [
       "Per Unit Worker Cost": 3.66,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.02,
+      Building : "Ranch",
       Ingredients: "12Fodder,16Water"
     },
     {
@@ -60,6 +71,7 @@ const productData = [
       "Per Unit Worker Cost": 1.66,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.01,
+      Building : "Ranch",
       Ingredients: "4Fodder,4Water"
     },
     {
@@ -69,6 +81,7 @@ const productData = [
       "Per Unit Worker Cost": 0.25,
       "Transport Units Required per Unit": 0.1,
       "Per Unit Admin Cost": 0,
+      Building : "Farm",
       Ingredients: "1Seeds,0.5Water"
     },
     {
@@ -78,6 +91,7 @@ const productData = [
       "Per Unit Worker Cost": 0.37,
       "Transport Units Required per Unit": 0.2,
       "Per Unit Admin Cost": 0, 
+      Building : "Farm",
       Ingredients: "5Seeds,2Water"
     },
     {
@@ -96,6 +110,7 @@ const productData = [
       "Per Unit Worker Cost": 0.43,
       "Transport Units Required per Unit": 0.5,
       "Per Unit Admin Cost": 0,
+      Building : "Farm",
       Ingredients: "1Seeds,1Water"
     },
     {
@@ -105,6 +120,7 @@ const productData = [
       "Per Unit Worker Cost": 0.16,
       "Transport Units Required per Unit": 0.1,
       "Per Unit Admin Cost": 0,
+      Building : "Farm",
       Ingredients: "1Seeds,3Water"
     },
     {
@@ -114,6 +130,7 @@ const productData = [
       "Per Unit Worker Cost": 0.61,
       "Transport Units Required per Unit": 0.1,
       "Per Unit Admin Cost": 0,
+      Building : "Farm",
       Ingredients: "1Seeds,1Water"
     },
     {
@@ -123,6 +140,7 @@ const productData = [
       "Per Unit Worker Cost": 16.13,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.09,
+      Building : "SlaughterHouse",
       Ingredients: "0.125Cows"
     },
     {
@@ -132,6 +150,7 @@ const productData = [
       "Per Unit Worker Cost": 5.38,
       "Transport Units Required per Unit": 0.1,
       "Per Unit Admin Cost": 0.03,
+      Building : "SlaughterHouse",
       Ingredients: "0.0625Pigs" 
     },
     {
@@ -141,6 +160,7 @@ const productData = [
       "Per Unit Worker Cost": 0.44,
       "Transport Units Required per Unit": 0.1, 
       "Per Unit Admin Cost": 0,
+      Building : "Ranch",
       Ingredients: "0.5Grain 0.4Water"
     },
     {
@@ -150,6 +170,7 @@ const productData = [
       "Per Unit Worker Cost": 16.53,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.1,
+      Building : "Mill",
       Ingredients: "10Coffee Beans"
     },
     {
@@ -159,6 +180,7 @@ const productData = [
       "Per Unit Worker Cost": 1.14,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.01,
+      Building : "Ranch",
       Ingredients: "0.5Fodder,2Water"
     },
     {
@@ -168,6 +190,7 @@ const productData = [
       "Per Unit Worker Cost": 2.64,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.02,
+      Building : "Beverage Factory",
       Ingredients: "5Oranges,1Sugar"
     },
     {
@@ -177,6 +200,7 @@ const productData = [
       "Per Unit Worker Cost": 6.6,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.04,
+      Building : "Beverage Factory",
       Ingredients: "8Apples"
     },
     {
@@ -186,6 +210,7 @@ const productData = [
       "Per Unit Worker Cost": 3.3, 
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.02,
+      Building : "Beverage Factory",
       Ingredients: "3Vegetables,2Sugar,1Water"
     },
     {
@@ -195,6 +220,7 @@ const productData = [
       "Per Unit Worker Cost": 118.06,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.69,
+      Building : "Food Processing Plant",
       Ingredients: "10Cocoa,0.5Milk,1Sugar"
     },
     {
@@ -204,6 +230,7 @@ const productData = [
       "Per Unit Worker Cost": 9.18,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.05,
+      Building : "Food Processing Plant",
       Ingredients: "1SugarCane,0.5Power"
     },
     {
@@ -213,6 +240,7 @@ const productData = [
       "Per Unit Worker Cost": 37.51,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.22,
+      Building : "Bakery",
       Ingredients: "1Eggs,2Flour,0.5Butter"
     },
     {
@@ -222,6 +250,7 @@ const productData = [
       "Per Unit Worker Cost": 838.07,
       "Transport Units Required per Unit": 2, 
       "Per Unit Admin Cost": 4.93,
+      Building : "Catering",
       Ingredients: "2Vegetables,0.5Butter,0.5Water"
     },
     {
@@ -231,6 +260,7 @@ const productData = [
       "Per Unit Worker Cost": 4.35,
       "Transport Units Required per Unit": 0.1,
       "Per Unit Admin Cost": 0.03,
+      Building : "Mill",
       Ingredients: "15Grain"
     },
     {
@@ -240,6 +270,7 @@ const productData = [
       "Per Unit Worker Cost": 37.51, 
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.22,
+      Building : "Bakery",
       Ingredients: "1Dough"
     }, 
     {
@@ -249,6 +280,7 @@ const productData = [
       "Per Unit Worker Cost": 75.01,
       "Transport Units Required per Unit": 2,
       "Per Unit Admin Cost": 0.44, 
+      Building : "Bakery",
       Ingredients: "2Apples,1Sugar,1Dough"
     },
     {
@@ -258,6 +290,7 @@ const productData = [
       "Per Unit Worker Cost": 41.32,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.24,
+      Building : "Food Processing Plant",
       Ingredients: "2Vegetables,1Sausages,2Dough,1Cheese"
     },
     {
@@ -267,6 +300,7 @@ const productData = [
       "Per Unit Worker Cost": 50.66,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.12,
+      Building : "Food Processing Plant",
       Ingredients: "2Eggs,2Flour,1Pasta"
     },
     {
@@ -276,6 +310,7 @@ const productData = [
       "Per Unit Worker Cost": 27.55,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.16,
+      Building : "Food Processing Plant",
       Ingredients: "0.5Milk"
     },
     {
@@ -285,6 +320,7 @@ const productData = [
       "Per Unit Worker Cost": 68.87,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.41,
+      Building : "Food Processing Plant",
       Ingredients: "1Milk"
     },
     {
@@ -294,6 +330,7 @@ const productData = [
       "Per Unit Worker Cost": 1257.11,
       "Transport Units Required per Unit": 2,
       "Per Unit Admin Cost": 7.39,
+      Building : "Catering",
       Ingredients: "3Vegetables,4Steak,0.5Bread,1Butter,0.5Vegetable Oil"
     },
     {
@@ -303,6 +340,7 @@ const productData = [
       "Per Unit Worker Cost": 419.04,
       "Transport Units Required per Unit": 2,
       "Per Unit Admin Cost": 2.46,
+      Building : "Catering",
       Ingredients: "1Steak,1Sauce,0.5Cheese"
     },
     {
@@ -312,6 +350,7 @@ const productData = [
       "Per Unit Worker Cost": 628.55,
       "Transport Units Required per Unit": 2,
       "Per Unit Admin Cost": 3.7,
+      Building : "Catering",
       Ingredients: "2Sausages,1Sauce,1Bread,0.5Vegetable Oil"
     },
     {
@@ -321,6 +360,7 @@ const productData = [
       "Per Unit Worker Cost": 1257.11,
       "Transport Units Required per Unit": 2,
       "Per Unit Admin Cost": 7.39,
+      Building : "Catering",
       Ingredients: "8Coffee Powder,1Orange Juice,1Apple Cider,2Ginger Beer"
     },
     {
@@ -330,6 +370,7 @@ const productData = [
       "Per Unit Worker Cost": 10.33,
       "Transport Units Required per Unit": 1, 
       "Per Unit Admin Cost": 0.06,
+      Building : "Food Processing Plant",
       Ingredients: "10Vegetables,1Power"
     },
     {
@@ -339,6 +380,7 @@ const productData = [
       "Per Unit Worker Cost": 314.28,
       "Transport Units Required per Unit": 2,
       "Per Unit Admin Cost": 1.85,
+      Building : "Catering",
       Ingredients: "2Cheese,0.5Vegetable Oil"
     },
     {
@@ -348,6 +390,7 @@ const productData = [
       "Per Unit Worker Cost": 359.17,
       "Transport Units Required per Unit": 2,
       "Per Unit Admin Cost": 2.11,
+      Building : "Catering",
       Ingredients: "5Vegetables,4Flour,1Vegetable Oil"
     },
     {
@@ -357,6 +400,7 @@ const productData = [
       "Per Unit Worker Cost": 2.02,
       "Transport Units Required per Unit": 10,
       "Per Unit Admin Cost": 0.01, 
+      Building : "Concrete Factory",
       Ingredients: "15Cement,20Water,5Steel,20Sand"
     },
     {
@@ -366,6 +410,7 @@ const productData = [
       "Per Unit Worker Cost": 1.03,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.01,
+      Building : "Concrete Factory",
       Ingredients: "0.5Clay"
     },
     {
@@ -375,6 +420,7 @@ const productData = [
       "Per Unit Worker Cost": 4.2,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.02,
+      Building : "Construction Factory",
       Ingredients: "0.5Wood"
     },
     {
@@ -384,6 +430,7 @@ const productData = [
       "Per Unit Worker Cost": 350,
       "Transport Units Required per Unit": 2.06,
       "Per Unit Admin Cost": 0,
+      Building : "General Contractor",
       Ingredients: "8Steel Beams,4Windows,4Tools,5Diesel,0.125Bulldozer"
     },
     {
@@ -393,6 +440,7 @@ const productData = [
       "Per Unit Worker Cost": 0.29, 
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0,
+      Building : "Quarry",
       Ingredients: "1Power"
     },
     {
@@ -402,6 +450,7 @@ const productData = [
       "Per Unit Worker Cost": 1.35,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.01,
+      Building : "Farm",
       Ingredients: "1Seeds,4Water"
     },
     {
@@ -411,6 +460,7 @@ const productData = [
       "Per Unit Worker Cost": 1.27,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0,
+      Building : "Concrete Factory",
       Ingredients: "3Limestone"
     },
     {
@@ -420,6 +470,7 @@ const productData = [
       "Per Unit Worker Cost": 0.39,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0,
+      Building : "Quarry",
       Ingredients: "2Power"
     },
     {
@@ -429,6 +480,7 @@ const productData = [
       "Per Unit Worker Cost": 3.72,
       "Transport Units Required per Unit": 5,
       "Per Unit Admin Cost": 0.02,
+      Building : "Construction Factory",
       Ingredients: "4Power,1Steel"
     },
     {
@@ -438,6 +490,7 @@ const productData = [
       "Per Unit Worker Cost": 28.9, 
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.17,
+      Building : "Construction Factory",
       Ingredients: "2Aluminium,1Glass"
     },
     {
@@ -447,6 +500,7 @@ const productData = [
       "Per Unit Worker Cost": 18.58,
       "Transport Units Required per Unit": 1,
       "Per Unit Admin Cost": 0.11,
+      Building : "Construction Factory",
       Ingredients: "0.5Planks,1Electronic components,1Batteries,0.5Steel"
     },
     {
@@ -456,6 +510,7 @@ const productData = [
       "Per Unit Worker Cost": 0.62,
       "Transport Units Required per Unit": 0.5,
       "Per Unit Admin Cost": 0,
+      Building : "Fashion Factory",
       Ingredients: "2Cotton,1Power"
     },
     {
@@ -465,6 +520,7 @@ const productData = [
         "Per Unit Worker Cost": 4.58,
         "Transport Units Required per Unit": 1,
         "Per Unit Admin Cost": 0.03,
+        Building : "Ranch",
         Ingredients: "0.125Cows"
         },
         {
@@ -474,6 +530,7 @@ const productData = [
         "Per Unit Worker Cost": 0.83,
         "Transport Units Required per Unit": 1,
         "Per Unit Admin Cost": 0,
+        Building : "Fashion Factory",
         Ingredients: "1Fabric"
         },
         {
@@ -483,6 +540,7 @@ const productData = [
         "Per Unit Worker Cost": 0.96,
         "Transport Units Required per Unit": 1,
         "Per Unit Admin Cost": 0.01,
+        Building : "Fashion Factory",
         Ingredients: "0.5Fabric,0.5Leather"
         },
         {
@@ -492,6 +550,7 @@ const productData = [
         "Per Unit Worker Cost": 0.92,
         "Transport Units Required per Unit": 1,
         "Per Unit Admin Cost": 0.01,
+        Building : "Fashion Factory",
         Ingredients: "3Fabric,0.5Plastic"
         },
         {
@@ -501,6 +560,7 @@ const productData = [
         "Per Unit Worker Cost": 1.41,
         "Transport Units Required per Unit": 1,
         "Per Unit Admin Cost": 0.01,
+        Building : "Fashion Factory",
         Ingredients: "1Leather,0.2Plastic"
         },
         {
@@ -510,6 +570,7 @@ const productData = [
         "Per Unit Worker Cost": 2.03,
         "Transport Units Required per Unit": 1,
         "Per Unit Admin Cost": 0.01,
+        Building : "Fashion Factory",
         Ingredients: "1.5Leather"
         },
         {
@@ -519,6 +580,7 @@ const productData = [
         "Per Unit Worker Cost": 0.8,
         "Transport Units Required per Unit": 1,
         "Per Unit Admin Cost": 0,
+        Building : "Fashion Factory",
         Ingredients: "1Plastic"
         },
         {
@@ -528,6 +590,7 @@ const productData = [
         "Per Unit Worker Cost": 7.33,
         "Transport Units Required per Unit": 1,
         "Per Unit Admin Cost": 0.04,
+        Building : "Fashion Factory",
         Ingredients: "2Electronic components,0.5Glass,0.1Golden Bars"
         },
         {
@@ -537,86 +600,17 @@ const productData = [
         "Per Unit Worker Cost": 3.33,
         "Transport Units Required per Unit": 1,
         "Per Unit Admin Cost": 0.02,
+        Building : "Fashion Factory",
         Ingredients: "0.25Golden Bars"
-        },{
-Product: "Leather",
-"Price on Exchange": 20.25,
-"Units Per Hour": 30.14,
-"Per Unit Worker Cost": 4.58,
-"Transport Units Required per Unit": 1,
-"Per Unit Admin Cost": 0.03,
-Ingredients: "0.125Cows"
-},
-{
-Product: "Underwear",
-"Price on Exchange": 4.75,
-"Units Per Hour": 165.77,
-"Per Unit Worker Cost": 0.83,
-"Transport Units Required per Unit": 1,
-"Per Unit Admin Cost": 0,
-Ingredients: "1Fabric"
-},
-{
-Product: "Gloves",
-"Price on Exchange": 14.9,
-"Units Per Hour": 143.17,
-"Per Unit Worker Cost": 0.96,
-"Transport Units Required per Unit": 1,
-"Per Unit Admin Cost": 0.01,
-Ingredients: "0.5Fabric,0.5Leather"
-},
-{
-Product: "Dress",
-"Price on Exchange": 17.4,
-"Units Per Hour": 150.7,
-"Per Unit Worker Cost": 0.92,
-"Transport Units Required per Unit": 1,
-"Per Unit Admin Cost": 0.01,
-Ingredients: "3Fabric,0.5Plastic"
-},
-{
-Product: "Stiletto Heel",
-"Price on Exchange": 25.75,
-"Units Per Hour": 97.96,
-"Per Unit Worker Cost": 1.41,
-"Transport Units Required per Unit": 1,
-"Per Unit Admin Cost": 0.01,
-Ingredients: "1Leather,0.2Plastic"
-},
-{
-Product: "Handbags",
-"Price on Exchange": 33.5,
-"Units Per Hour": 67.82,
-"Per Unit Worker Cost": 2.03,
-"Transport Units Required per Unit": 1,
-"Per Unit Admin Cost": 0.01,
-Ingredients: "1.5Leather"
-},
-{
-    Product: "Sneakers",
-    "Price on Exchange": 12.6,
-    "Units Per Hour": 173.31,
-    "Per Unit Worker Cost": 0.8,
-    "Transport Units Required per Unit": 1,
-    "Per Unit Admin Cost": 0,
-    Ingredients: "1Plastic"
-},
-{
-    Product: "Luxury Watch",
-    "Price on Exchange": 720,
-    "Units Per Hour": 18.84,
-    "Per Unit Worker Cost": 7.33,
-    "Transport Units Required per Unit": 1,
-    "Per Unit Admin Cost": 0.04,
-    Ingredients: "2Electronic components,0.5Glass,0.1Golden Bars"
-},
-{
+        },
+  {
     Product: "Power",
     "Price on Exchange": 0.25,
     "Units Per Hour": 2566.94, 
     "Per Unit Worker Cost": 0.16,
     "Transport Units Required per Unit": 0,
     "Per Unit Admin Cost": 0,
+    Building : "Power Plant",
     Ingredients: ""
   },
   {
@@ -626,6 +620,7 @@ Ingredients: "1.5Leather"
     "Per Unit Worker Cost": 14.16,
     "Transport Units Required per Unit": 1,
     "Per Unit Admin Cost": 0.08,
+    Building : "Oil Rig",
     Ingredients: "25Power"
   },
   {
@@ -635,6 +630,7 @@ Ingredients: "1.5Leather"
     "Per Unit Worker Cost": 4.71,
     "Transport Units Required per Unit": 1,
     "Per Unit Admin Cost": 0.03, 
+    Building : "Refinery",
     Ingredients: "15Power,0.75Crude Oil,0.25Ethanol"
   },
   { 
@@ -653,6 +649,7 @@ Ingredients: "1.5Leather"
     "Per Unit Worker Cost": 4.26,
     "Transport Units Required per Unit": 1,
     "Per Unit Admin Cost": 0.03,
+    Building : "Refinery",
     Ingredients: "10SugarCane,20Power"
   },
   {
@@ -662,6 +659,7 @@ Ingredients: "1.5Leather"
     "Per Unit Worker Cost": 10.62,
     "Transport Units Required per Unit": 1,
     "Per Unit Admin Cost": 0.06,
+    Building : "Oil Rig",
     Ingredients: "20Power"
   },
   {
@@ -671,6 +669,7 @@ Ingredients: "1.5Leather"
     "Per Unit Worker Cost": 6.19,
     "Transport Units Required per Unit": 1,
     "Per Unit Admin Cost": 0.04,
+    Building : "Refinery",
     Ingredients: "1Methane,5Power"
   },
   {
@@ -815,7 +814,7 @@ Ingredients: "1.5Leather"
     "Per Unit Worker Cost": 22.5,
     "Transport Units Required per Unit": 2,
     "Per Unit Admin Cost": 0.13,
-    Ingredients: "6Displays,2Aluminium"
+    Ingredients: "6Displays,2Aluminium,5Leather"
   },
   {
     Product: "Basic Interior",
@@ -851,7 +850,7 @@ Ingredients: "1.5Leather"
     "Per Unit Worker Cost": 22.5,
     "Transport Units Required per Unit": 5,
     "Per Unit Admin Cost": 0.13,
-    Ingredients: "15Batteries,1On-Board Computer,2Electric Motor,1Basic Interior"
+    Ingredients: "15Batteries,1On-Board Computer,2Electric Motor,1Basic Interior,1Car Body"
   },
   {
     Product: "Luxury E-Car",
@@ -860,7 +859,7 @@ Ingredients: "1.5Leather"
     "Per Unit Worker Cost": 112.52,
     "Transport Units Required per Unit": 5,
     "Per Unit Admin Cost": 0.66,
-    Ingredients: "30Batteries,2On-Board Computer,4Electric Motor,1Luxury Car Interior"
+    Ingredients: "30Batteries,2On-Board Computer,4Electric Motor,1Luxury Car Interior,1Car Body"
   },
   {
     Product: "Economy Car",
@@ -869,7 +868,7 @@ Ingredients: "1.5Leather"
     "Per Unit Worker Cost": 32.15,
     "Transport Units Required per Unit": 5,
     "Per Unit Admin Cost": 0.19,
-    Ingredients: "1On-Board Computer,1Basic Interior,1Combustion Engine"
+    Ingredients: "1On-Board Computer,1Basic Interior,1Combustion Engine,1Car Body"
   },
   {
     Product: "Luxury Car", 
@@ -878,7 +877,7 @@ Ingredients: "1.5Leather"
     "Per Unit Worker Cost": 225.04,
     "Transport Units Required per Unit": 5,
     "Per Unit Admin Cost": 1.32,
-    Ingredients: "5Leather,2On-Board Computer,1Luxury Car Interior,2Combustion Engine"
+    Ingredients: "5Leather,2On-Board Computer,1Luxury Car Interior,2Combustion Engine,1Car Body"
   },
   {
     Product: "Truck",
@@ -887,7 +886,7 @@ Ingredients: "1.5Leather"
     "Per Unit Worker Cost": 93.77,
     "Transport Units Required per Unit": 5,
     "Per Unit Admin Cost": 0.55,
-    Ingredients: "1On-Board Computer,1Basic Interior,6Combustion Engine,10Steel"
+    Ingredients: "1On-Board Computer,1Basic Interior,6Combustion Engine,10Steel,1Car Body"
   },
   {
     Product: "Fuselage",
@@ -1135,6 +1134,9 @@ Ingredients: "1.5Leather"
     Ingredients: "8Carbon Fibers"
     }
     ];
+    productData.forEach(product => {
+      product["Per Unit Admin Cost"] = adminOverhead * product["Per Unit Worker Cost"];
+  });
     
 
     export default productData;

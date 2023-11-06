@@ -16,6 +16,12 @@ function displayProducts(products = productData) {
       const productCell = document.createElement('td');
       productCell.textContent = product.Product;
       row.appendChild(productCell);
+
+      // Building Cell
+      const buildingCell = document.createElement('td');
+      buildingCell.textContent = product.Building;
+      row.appendChild(buildingCell);
+
       
       // Profit Per Unit Cell
       const ingredientCostDetails = calculateIngredientCost(product);
@@ -49,8 +55,6 @@ function displayProducts(products = productData) {
   });
 }
 
-
-
 function calculateIngredientCost(product) {
   let ingredientBreakdown = '';
   let totalIngredientCost = 0;
@@ -76,8 +80,6 @@ function calculateIngredientCost(product) {
       breakdown: ingredientBreakdown
   };
 }
-
-
 
 function displayProfitBreakdownModal(product) {
   const modal = document.getElementById('costModal');
@@ -134,7 +136,6 @@ function displayProfitPerHourBreakdown(product, profitPerUnit) {
   });
 }
 
-
 const searchBar = document.getElementById('searchBar');
 
 searchBar.addEventListener('input', function() {
@@ -162,6 +163,10 @@ function sortProducts(column) {
         let aValue, bValue;
 
         switch (column) {
+            case "Building":
+                aValue = a.Building;
+                bValue = b.Building;
+                break;
             case "Product":
                 aValue = a.Product;
                 bValue = b.Product;
@@ -186,6 +191,8 @@ function sortProducts(column) {
     displayProducts(); // Re-render the table with sorted data
 }
 document.getElementById('productHeader').addEventListener('click', () => sortProducts("Product"));
+document.getElementById('buildingHeader').addEventListener('click', () => sortProducts("Building"));
+
 document.getElementById('profitPerUnitHeader').addEventListener('click', () => sortProducts("ProfitPerUnit"));
 document.getElementById('profitPerHourHeader').addEventListener('click', () => sortProducts("ProfitPerHour"));
 document.getElementById('profitPerDayHeader').addEventListener('click', () => sortProducts("ProfitPerDay"));
